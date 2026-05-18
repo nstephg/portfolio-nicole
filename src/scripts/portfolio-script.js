@@ -1,5 +1,7 @@
 // --- ANIMACIÓN DE FONDO (LÍNEAS Y CAMINITOS) ---
+console.log("--- PORTFOLIO SCRIPT IS RUNNING ---");
 const canvas = document.getElementById('canvas-lines');
+console.log("Canvas element found:", canvas);
 const ctx = canvas.getContext('2d');
 
 canvas.width = document.documentElement.clientWidth - 1;
@@ -88,31 +90,36 @@ const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('#nav-menu');
 
 // Abrir/Cerrar menú al hacer clic en la hamburguesa
-menu.addEventListener('click', function () {
-    menu.classList.toggle('is-active');
-    menuLinks.classList.toggle('active');
-});
-// Cerrar menú al hacer clic en un enlace
-document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
-    menu.classList.remove('is-active');
-    menuLinks.classList.remove('active');
-}));
+if (menu && menuLinks) {
+    menu.addEventListener('click', function () {
+        menu.classList.toggle('is-active');
+        menuLinks.classList.toggle('active');
+    });
+    // Cerrar menú al hacer clic en un enlace
+    document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
+        menu.classList.remove('is-active');
+        menuLinks.classList.remove('active');
+    }));
+}
 
 const langBtn = document.getElementById('language-toggle');
 const langBtnMobile = document.getElementById('language-toggle-mobile');
 
+// Configuración inicial del texto del idioma de forma INMEDIATA
+const isEnglish = document.cookie.includes('/es/en');
+const text = isEnglish ? 'ES' : 'EN';
+
+if (langBtn) langBtn.innerText = text;
+if (langBtnMobile) langBtnMobile.innerText = text;
+
 // Función única para procesar el clic
 const handleLangClick = () => {
-    const currentLang = langBtn.innerText;
-
-    if (currentLang === 'EN') {
-        changeLanguage('en');
-    } else {
-        changeLanguage('es');
-    }
+    // Si dice 'EN', cambiamos a inglés. Si dice 'ES', cambiamos a español.
+    const currentLang = langBtn ? langBtn.innerText : (langBtnMobile ? langBtnMobile.innerText : 'EN'); 
+    changeLanguage(currentLang === 'EN' ? 'en' : 'es');
 };
 
-// Escuchamos el clic en ambos botones
+// Escuchamos el clic en ambos botones de forma segura
 if (langBtn) langBtn.addEventListener('click', handleLangClick);
 if (langBtnMobile) langBtnMobile.addEventListener('click', handleLangClick);
 
@@ -121,28 +128,6 @@ function changeLanguage(lang) {
     document.cookie = `googtrans=/es/${lang}; domain=${window.location.hostname}; path=/`;
     location.reload();
 }
-
-window.addEventListener('load', () => {
-    const isEnglish = document.cookie.includes('/es/en');
-    const text = isEnglish ? 'ES' : 'EN';
-
-    if (langBtn) langBtn.innerText = text;
-    if (langBtnMobile) langBtnMobile.innerText = text;
-});
-
-function changeLanguage(lang) {
-    document.cookie = `googtrans=/es/${lang}; path=/`;
-    document.cookie = `googtrans=/es/${lang}; domain=${window.location.hostname}; path=/`;
-    location.reload();
-}
-
-window.addEventListener('load', () => {
-    if (document.cookie.includes('/es/en')) {
-        langBtn.innerText = 'ES';
-    } else {
-        langBtn.innerText = 'EN';
-    }
-});
 
 window.addEventListener('resize', () => {
     canvas.width = document.documentElement.clientWidth - 1;
