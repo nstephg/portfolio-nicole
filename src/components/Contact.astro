@@ -1,0 +1,43 @@
+---
+// Contact.astro
+---
+
+<section id="contacto" class="contact-premium">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info reveal-left">
+                        <span class="eyebrow">DI HOLA</span>
+                        <h2>Hablemos y construyamos algo <span class="italic">increíble.</span></h2>
+                        <p>¿Tienes un proyecto en mente o quieres trabajar conmigo? Estoy disponible para nuevas oportunidades y colaboraciones creativas.</p>
+                        
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/nicole.c.dev/" target="_blank" class="social-item"><span>IG</span> Instagram</a>
+                            <a href="https://wa.me/573174970432" target="_blank" class="social-item"><span>WA</span> WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container reveal-right">
+                        <form action="https://formspree.io/f/mdanvjrw" method="POST" class="premium-form" id="contact-form">
+                            <input type="text" name="_gotcha" style="display:none !important">
+                            <div class="input-group">
+                                <input type="text" id="name" name="nombre" required="">
+                                <label for="name">Nombre</label>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" name="email" required="">
+                                <label for="email">Email</label>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="message" name="mensaje" rows="4" required=""></textarea>
+                                <label for="message">Mensaje</label>
+                                <span class="bar"></span>
+                            </div>
+                            <button type="submit" class="btn-submit" id="submit-btn">ENVIAR MENSAJE</button>
+                            <p id="form-status" style="margin-top: 15px; text-align: center; font-size: 0.9rem; min-height: 20px;"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>

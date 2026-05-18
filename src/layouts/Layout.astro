@@ -1,0 +1,47 @@
+---
+import '../styles/global.css';
+import '../styles/custom.css';
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicole Cervera | Diseñadora Interactiva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal" is:inline></script>
+    <script src="https://cdn.tailwindcss.com" is:inline></script>
+    <script is:inline>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas-lines"></canvas>
+    
+    <slot />
+
+    <div id="google_translate_element" style="display:none;"></div>
+    <script is:inline>
+        function googleTranslateElementInit() {
+            if (window.google && window.google.translate) {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'es',
+                    includedLanguages: 'en,es',
+                    autoDisplay: false
+                }, 'google_translate_element');
+            }
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" is:inline></script>
+    <script src="/script.js" is:inline></script>
+</body>
+</html>

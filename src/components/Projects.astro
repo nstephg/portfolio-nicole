@@ -1,0 +1,753 @@
+---
+// Projects.astro
+---
+
+<section id="proyectos" class="projects-premium relative">
+    <!-- Efecto de Fondo Sutil para toda la sección -->
+    <div class="absolute inset-0 z-0 pointer-events-none opacity-20">
+        <div
+            class="absolute top-[10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-[#643d29]/20 blur-[100px]"
+        >
+        </div>
+        <div
+            class="absolute bottom-[10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-[#643d29]/20 blur-[100px]"
+        >
+        </div>
+    </div>
+
+    <div class="container relative z-10">
+        <span class="eyebrow reveal-top">SHOWCASE</span>
+        <h2 class="section-title reveal-top">
+            PROYECTOS <span class="italic">DESTACADOS</span>
+        </h2>
+
+        <div class="projects-grid">
+            <div
+                class="project-card reveal-bottom"
+                style="transition-delay: 0.2s;"
+            >
+                <div class="project-image">
+                    <img src="assets/img/ArrowShopOne.png" alt="ArrowShopOne" />
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category">WEB</span>
+                            <h3>ArrowShopOne</h3>
+                            <p>
+                                Diseño y desarrollo de página web e-commerce
+                                para la venta de artículos de motocross.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                                <span>Figma</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>Vercel</span>
+                            </div>
+
+                            <button
+                                class="btn-case view-project-btn"
+                                data-project="arrowshop">Ver Detalles ↗</button
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="project-card reveal-bottom"
+                style="transition-delay: 0.2s;"
+            >
+                <div class="project-image">
+                    <img src="assets/img/TopoAvance.png" alt="TopoAvance" />
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category">WEB</span>
+                            <h3>TopoAvance</h3>
+                            <p>
+                                Diseño y desarrollo de página web corporativa
+                                para TopoAvance con enfoque en experiencia de
+                                usuario.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Figma</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                            </div>
+
+                            <button
+                                class="btn-case view-project-btn"
+                                data-project="topoavance">Ver Detalles ↗</button
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal-bottom">
+                <div class="project-image">
+                    <img src="assets/img/StealthGames.png" alt="StealthGames" />
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category"
+                                >UX/UI · DESARROLLO</span
+                            >
+                            <h3>StealthGames</h3>
+                            <p>
+                                Diseño UX/UI de una app para la venta de
+                                videojuegos, con galería premium – prototipo
+                                interactivo.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Figma</span>
+                            </div>
+
+                            <button
+                                class="btn-case view-project-btn"
+                                data-project="stealthgames"
+                                >Ver Detalles ↗</button
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal-bottom">
+                <div class="project-image">
+                    <img src="assets/img/rosemsas.png" alt="rosemsas" />
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <span class="project-category"
+                                >WEB / INGENIERÍA</span
+                            >
+                            <h3>Rosemsas</h3>
+                            <p>
+                                Sitio web para empresa de empalmes mecánicos.
+                                Desarrollo full-stack con diseño responsive a
+                                medida.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>Laravel</span>
+                                <span>PHP</span>
+                                <span>Tailwind</span>
+                                <span>JS</span>
+                                <span>Cloudflare</span>
+                            </div>
+
+                            <button
+                                class="btn-case view-project-btn"
+                                data-project="rosemsas">Ver Detalles ↗</button
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================== -->
+<!-- OVERLAY COMPONENTE -->
+<!-- ========================================== -->
+<div
+    id="project-modal-container"
+    class="fixed inset-0 z-[9999] hidden items-center justify-center p-4 md:p-8 antialiased bg-[#070707]/90 backdrop-blur-sm"
+>
+    <!-- Efecto de Fondo Sutil -->
+    <div class="absolute inset-0 z-0 pointer-events-none opacity-20">
+        <div
+            class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-[#643d29]/10 blur-[100px]"
+        >
+        </div>
+        <div
+            class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-[#643d29]/10 blur-[100px]"
+        >
+        </div>
+    </div>
+
+    <!-- OVERLAY COMPONENTE (DISEÑO COMPACTO Y PREMIUM) -->
+    <div
+        id="project-modal"
+        class="relative z-10 w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-[#0c0c0c] border border-white/10 rounded-2xl shadow-2xl transition-all duration-500 ease-out opacity-0 translate-y-4 scale-95"
+    >
+        <!-- Línea decorativa superior -->
+        <div
+            class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#643d29] to-transparent"
+        >
+        </div>
+
+        <!-- BARRA DE CONTROL DEL OVERLAY (SELECTOR DE PROYECTOS Y BOTÓN) -->
+        <div
+            class="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-black/40 sticky top-0 z-20 backdrop-blur-sm"
+        >
+            <!-- Selector ultra discreto para probar contenido interactivo -->
+            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar">
+                <span
+                    class="text-[9px] tracking-wider text-white/40 uppercase font-mono mr-2 hidden sm:inline-block"
+                    >PROYECTO:</span
+                >
+                <button
+                    onclick="switchProject('arrowshop')"
+                    id="btn-tab-arrowshop"
+                    class="px-3 py-1 rounded-full text-[10px] tracking-wider font-semibold border transition-all duration-300 border-[#643d29] bg-[#643d29]/10 text-white flex-shrink-0"
+                >
+                    ARROWSHOP
+                </button>
+                <button
+                    onclick="switchProject('topoavance')"
+                    id="btn-tab-topoavance"
+                    class="px-3 py-1 rounded-full text-[10px] tracking-wider font-semibold border transition-all duration-300 border-white/5 text-white/50 hover:text-white flex-shrink-0"
+                >
+                    TOPOAVANCE
+                </button>
+                <button
+                    onclick="switchProject('stealthgames')"
+                    id="btn-tab-stealthgames"
+                    class="px-3 py-1 rounded-full text-[10px] tracking-wider font-semibold border transition-all duration-300 border-white/5 text-white/50 hover:text-white flex-shrink-0"
+                >
+                    STEALTHGAMES
+                </button>
+                <button
+                    onclick="switchProject('rosemsas')"
+                    id="btn-tab-rosemsas"
+                    class="px-3 py-1 rounded-full text-[10px] tracking-wider font-semibold border transition-all duration-300 border-white/5 text-white/50 hover:text-white flex-shrink-0"
+                >
+                    ROSEMSAS
+                </button>
+            </div>
+
+            <!-- Botón Cerrar (Compacto) -->
+            <button
+                id="close-modal"
+                class="flex-shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/5 bg-white/[0.02] text-[9px] tracking-wider text-white/60 hover:text-white hover:border-[#643d29] hover:bg-[#643d29]/10 transition-all duration-300 ml-4"
+            >
+                <span>VOLVER</span>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    stroke="currentColor"
+                    class="w-3 h-3"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- CUERPO INTERNO DEL OVERLAY -->
+        <div class="p-5 md:p-8 space-y-8">
+            <!-- ENCABEZADO COMPACTO -->
+            <header class="space-y-2 max-w-2xl">
+                <span
+                    id="modal-project-category"
+                    class="text-[10px] tracking-[0.2em] text-[#643d29] font-bold uppercase block m-0"
+                ></span>
+                <h2
+                    class="text-2xl md:text-4xl font-sans font-bold leading-tight text-white m-0 p-0 !font-sans !text-2xl md:!text-4xl"
+                >
+                    <span
+                        id="modal-project-title-normal"
+                        class="text-white !font-sans"></span>
+                    <span
+                        id="modal-project-title-italic"
+                        class="font-serif italic font-normal text-[#643d29] !font-serif"
+                    ></span>
+                </h2>
+            </header>
+
+            <!-- CONTENEDOR DE MEDIOS (BANNER CON ALTO CONTROLADO) -->
+            <div
+                class="relative w-full rounded-xl overflow-hidden aspect-[21/9] max-h-[260px] border border-white/5 bg-black/40"
+            >
+                <img
+                    id="modal-project-image"
+                    src=""
+                    alt="Detalle del Proyecto"
+                    class="w-full h-full object-cover opacity-85 hover:scale-[1.01] transition-transform duration-700"
+                    onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80'"
+                />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#0c0c0c] via-transparent to-transparent opacity-50"
+                >
+                </div>
+            </div>
+
+            <!-- REJILLA DE METADATOS COMPACTA -->
+            <div
+                class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl bg-white/[0.01] border border-white/5"
+            >
+                <div>
+                    <span
+                        class="text-[9px] tracking-wider text-[#a0a0a0] uppercase block mb-0.5"
+                        >Rol</span
+                    >
+                    <span
+                        id="modal-project-role"
+                        class="text-xs font-medium text-white/90"></span>
+                </div>
+                <div>
+                    <span
+                        class="text-[9px] tracking-wider text-[#a0a0a0] uppercase block mb-0.5"
+                        >Propósito</span
+                    >
+                    <span
+                        id="modal-project-client"
+                        class="text-xs font-medium text-white/90"></span>
+                </div>
+                <div>
+                    <span
+                        class="text-[9px] tracking-wider text-[#a0a0a0] uppercase block mb-0.5"
+                        >Año</span
+                    >
+                    <span
+                        id="modal-project-year"
+                        class="text-xs font-medium text-white/90"></span>
+                </div>
+                <div>
+                    <span
+                        class="text-[9px] tracking-wider text-[#a0a0a0] uppercase block mb-0.5"
+                        >Tecnologías</span
+                    >
+                    <span
+                        id="modal-project-tech"
+                        class="text-xs font-medium text-[#643d29]"></span>
+                </div>
+            </div>
+
+            <!-- CONTENIDO EDITORIAL DE CASO DE ESTUDIO -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- COLUMNA IZQUIERDA: El Reto e Impacto -->
+                <div class="lg:col-span-5 space-y-6">
+                    <!-- Reto -->
+                    <div class="space-y-2">
+                        <h4
+                            class="text-[10px] tracking-widest text-[#643d29] font-bold uppercase m-0"
+                        >
+                            01 / EL RETO
+                        </h4>
+                        <h3
+                            id="modal-project-challenge-quote"
+                            class="text-lg font-serif italic text-white leading-snug m-0 !font-serif !text-lg"
+                        >
+                        </h3>
+                        <p
+                            id="modal-project-challenge"
+                            class="text-xs text-[#a0a0a0] leading-relaxed m-0 !text-xs"
+                        >
+                        </p>
+                    </div>
+
+                    <!-- Métricas / Resultados -->
+                    <div class="space-y-4 pt-4 border-t border-white/5">
+                        <h4
+                            class="text-[10px] tracking-widest text-[#643d29] font-bold uppercase m-0"
+                        >
+                            03 / RESULTADOS
+                        </h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-0.5">
+                                <span
+                                    id="modal-project-stat-one-val"
+                                    class="text-2xl font-sans font-bold text-white tracking-tight !font-sans !text-2xl"
+                                ></span>
+                                <p
+                                    id="modal-project-stat-one-desc"
+                                    class="text-[10px] text-[#a0a0a0] leading-snug m-0 !text-[10px]"
+                                >
+                                </p>
+                            </div>
+                            <div class="space-y-0.5">
+                                <span
+                                    id="modal-project-stat-two-val"
+                                    class="text-2xl font-sans font-bold text-[#643d29] tracking-tight !font-sans !text-2xl"
+                                ></span>
+                                <p
+                                    id="modal-project-stat-two-desc"
+                                    class="text-[10px] text-[#a0a0a0] leading-snug m-0 !text-[10px]"
+                                >
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: El Proceso (Cronología compacta) -->
+                <div class="lg:col-span-7 space-y-4">
+                    <h4
+                        class="text-[10px] tracking-widest text-[#643d29] font-bold uppercase m-0"
+                    >
+                        02 / EL PROCESO
+                    </h4>
+
+                    <div
+                        class="space-y-5 relative before:absolute before:left-3 before:top-1.5 before:bottom-1.5 before:w-[1px] before:bg-white/5"
+                    >
+                        <!-- Paso 1 -->
+                        <div class="relative pl-7 group">
+                            <div
+                                class="absolute left-1.5 top-1 w-2.5 h-2.5 rounded-full bg-[#643d29] border-2 border-[#0c0c0c] group-hover:scale-110 transition-transform"
+                            >
+                            </div>
+                            <div class="space-y-1">
+                                <span
+                                    class="text-[9px] tracking-widest text-[#643d29] font-bold"
+                                    >FASE 01 — PLAN</span
+                                >
+                                <h5
+                                    id="modal-project-step1-title"
+                                    class="text-xs text-white font-semibold m-0 !text-xs"
+                                >
+                                </h5>
+                                <p
+                                    id="modal-project-step1-desc"
+                                    class="text-[11px] text-[#a0a0a0] leading-relaxed m-0 !text-[11px]"
+                                >
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Paso 2 -->
+                        <div class="relative pl-7 group">
+                            <div
+                                class="absolute left-1.5 top-1 w-2.5 h-2.5 rounded-full bg-[#643d29] border-2 border-[#0c0c0c] group-hover:scale-110 transition-transform"
+                            >
+                            </div>
+                            <div class="space-y-1">
+                                <span
+                                    class="text-[9px] tracking-widest text-[#643d29] font-bold"
+                                    >FASE 02 — DISEÑO</span
+                                >
+                                <h5
+                                    id="modal-project-step2-title"
+                                    class="text-xs text-white font-semibold m-0 !text-xs"
+                                >
+                                </h5>
+                                <p
+                                    id="modal-project-step2-desc"
+                                    class="text-[11px] text-[#a0a0a0] leading-relaxed m-0 !text-[11px]"
+                                >
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Paso 3 -->
+                        <div class="relative pl-7 group">
+                            <div
+                                class="absolute left-1.5 top-1 w-2.5 h-2.5 rounded-full bg-[#643d29] border-2 border-[#0c0c0c] group-hover:scale-110 transition-transform"
+                            >
+                            </div>
+                            <div class="space-y-1">
+                                <span
+                                    class="text-[9px] tracking-widest text-[#643d29] font-bold"
+                                    >FASE 03 — CÓDIGO</span
+                                >
+                                <h5
+                                    id="modal-project-step3-title"
+                                    class="text-xs text-white font-semibold m-0 !text-xs"
+                                >
+                                </h5>
+                                <p
+                                    id="modal-project-step3-desc"
+                                    class="text-[11px] text-[#a0a0a0] leading-relaxed m-0 !text-[11px]"
+                                >
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PIE DE DETALLE CON BOTÓN DE VISITA (SUTIL) -->
+            <footer
+                class="pt-5 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4"
+            >
+                <div class="text-center sm:text-left">
+                    <p
+                        class="text-[9px] tracking-wider text-[#a0a0a0] uppercase m-0"
+                    >
+                        ¿Listo para interactuar?
+                    </p>
+                    <p class="text-[11px] text-white/50 m-0">
+                        Explora la experiencia del producto final directamente
+                        en su entorno web.
+                    </p>
+                </div>
+
+                <a
+                    id="modal-project-link"
+                    href="#"
+                    target="_blank"
+                    class="group relative inline-flex items-center justify-center px-6 py-3 overflow-hidden rounded-full border border-white/10 bg-black text-[10px] tracking-widest text-white uppercase font-bold hover:border-[#643d29] transition-all duration-300 w-full sm:w-auto text-center"
+                >
+                    <span
+                        class="absolute inset-0 w-full h-full bg-[#643d29] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"
+                    ></span>
+                    <span class="relative z-10 flex items-center gap-2">
+                        VISITAR SITIO WEB
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="2.5"
+                            stroke="currentColor"
+                            class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                        </svg>
+                    </span>
+                </a>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<script is:inline>
+    const projectsData = {
+        arrowshop: {
+            category: "DISEÑO INTERACTIVO & DESARROLLO",
+            titleNormal: "ArrowShop",
+            titleItalic: "E-Commerce",
+            image: "assets/img/ArrowShopOne.png",
+            role: "Diseño UI/UX, Backend & Frontend",
+            client: "Estudio Propio",
+            year: "2026",
+            tech: "HTML • CSS • JS • Figma • PHP • MySQL • Vercel",
+            challengeQuote:
+                "¿Cómo desarrollar una página web que ayude a mi hermano a tener más clientes",
+            challenge:
+                "El principal desafío consistió en estructurar una gran cantidad de productos y variantes sin abrumar visualmente al comprador, logrando transiciones que den una experiencia cercana a una app nativa.",
+            statOneVal: "-42%",
+            statOneDesc: "Menor fricción en checkout.",
+            statTwoVal: "+38%",
+            statTwoDesc: "Aumento en conversión.",
+            step1Title: "Wireframes & Mapeo de Fricción",
+            step1Desc:
+                "Análisis exhaustivo de los cuellos de botella del checkout anterior. Creamos flujos limpios de 2 pasos probados directamente.",
+            step2Title: "Sistema de Diseño Premium",
+            step2Desc:
+                "Definición de grids sofisticados, tipografía de lectura rápida y micro-estados visuales para dar feedback de interacción táctil.",
+            step3Title: "Optimización de Código y SEO",
+            step3Desc:
+                "Implementación en HTML con carga diferida y SEO, reduciendo los tiempos de carga en móviles a menos de un segundo.",
+            link: "https://arrowshopone.store",
+        },
+        topoavance: {
+            category: "REDISEÑO / WEB CORPORATIVA",
+            titleNormal: "TopoAvance",
+            titleItalic: "Corporate",
+            image: "assets/img/TopoAvance.png",
+            role: "Full-Stack Dev",
+            client: "TopoAvance",
+            year: "2025",
+            tech: "HTML • CSS • PHP • JS",
+            challengeQuote:
+                "¿Cómo transmitir tecnología de punta y profesionalismo desde el primer clic?",
+            challenge:
+                "El cliente requería una plataforma mucho más moderna y funcional. Se trató de un rediseño completo, programado absolutamente desde cero para mostrar su tecnología topográfica adecuadamente.",
+            statOneVal: "2.5x",
+            statOneDesc: "Carga más rápida.",
+            statTwoVal: "+60%",
+            statTwoDesc: "Mejora en UX Móvil.",
+            step1Title: "Arquitectura de Información",
+            step1Desc:
+                "Reestructuración profunda de los servicios ofrecidos, categorizando la maquinaria compleja en bloques entendibles.",
+            step2Title: "Diseño UI Funcional",
+            step2Desc:
+                "Implementación de una estética limpia que destaca la fotografía del equipamiento técnico sin sobrecargar.",
+            step3Title: "Desarrollo y Despliegue",
+            step3Desc:
+                "Desarrollo desde cero con optimización en cada asset, logrando un portal corporativo ágil y confiable.",
+            link: "https://topoavance.com",
+        },
+        stealthgames: {
+            category: "UX/UI · PROTOTIPO",
+            titleNormal: "StealthGames",
+            titleItalic: "App Design",
+            image: "assets/img/StealthGames.png",
+            role: "Diseño UI/UX",
+            client: "Proyecto Personal",
+            year: "2025",
+            tech: "Figma",
+            challengeQuote:
+                "¿Cómo hacer que el proceso de compra de juegos se sienta inmersivo?",
+            challenge:
+                "Diseñar la experiencia y la interfaz para una aplicación de videojuegos con un alto enfoque en ediciones especiales y coleccionismo.",
+            statOneVal: "100%",
+            statOneDesc: "Componentes UI reutilizables.",
+            statTwoVal: "V1.0",
+            statTwoDesc: "Flujo validado.",
+            step1Title: "Investigación y Benchmarking",
+            step1Desc:
+                "Análisis de las mejores prácticas en tiendas nativas para entender qué patrones retienen usuarios.",
+            step2Title: "Prototipado en Figma",
+            step2Desc:
+                "Diseño interactivo de alta fidelidad, enfocándonos en galerías donde el arte del juego es protagonista.",
+            step3Title: "Animaciones y Flujos",
+            step3Desc:
+                "Añadido de micro-interacciones fluidas y un diseño centrado en el descubrimiento orgánico de títulos.",
+            link: "https://www.figma.com/proto/sywHWgHJw5RjupMZUjgQ8D/Proyecto-StealthGames",
+        },
+        rosemsas: {
+            category: "REDISEÑO / WEB INGENIERÍA",
+            titleNormal: "Rosemsas",
+            titleItalic: "Engineering",
+            image: "assets/img/rosemsas.png",
+            role: "Full-Stack Dev",
+            client: "Rosemsas",
+            year: "2026",
+            tech: "Laravel • Tailwind • PHP",
+            challengeQuote:
+                "¿Cómo plasmar seguridad técnica y capacidad industrial en un solo sitio web?",
+            challenge:
+                "Al igual que TopoAvance, fue un rediseño programado desde cero porque la clienta buscaba una presencia web mucho más moderna y a la altura de su visión corporativa.",
+            statOneVal: "SSL",
+            statOneDesc: "Seguridad Cloudflare.",
+            statTwoVal: "100%",
+            statTwoDesc: "Autogestionable.",
+            step1Title: "Definición Backend",
+            step1Desc:
+                "Construcción de una arquitectura sólida utilizando Laravel y PHP puro para garantizar un entorno seguro y escalable.",
+            step2Title: "Desarrollo Frontend",
+            step2Desc:
+                "Uso intensivo de Tailwind CSS para lograr un diseño completamente responsive, enfatizando la info técnica.",
+            step3Title: "Integración de Servicios",
+            step3Desc:
+                "Implementación de un módulo de envío de correos eficiente para cotizaciones, y despliegue protegido.",
+            link: "#",
+        },
+    };
+
+    function switchProject(projectId) {
+        const data = projectsData[projectId];
+        if (!data) return;
+
+        document.getElementById("modal-project-category").innerText =
+            data.category;
+        document.getElementById("modal-project-title-normal").innerText =
+            data.titleNormal;
+        document.getElementById("modal-project-title-italic").innerText =
+            data.titleItalic;
+
+        const imgEl = document.getElementById("modal-project-image");
+        imgEl.src = data.image;
+
+        document.getElementById("modal-project-role").innerText = data.role;
+        document.getElementById("modal-project-client").innerText = data.client;
+        document.getElementById("modal-project-year").innerText = data.year;
+        document.getElementById("modal-project-tech").innerText = data.tech;
+        document.getElementById("modal-project-challenge-quote").innerText =
+            data.challengeQuote;
+        document.getElementById("modal-project-challenge").innerText =
+            data.challenge;
+        document.getElementById("modal-project-stat-one-val").innerText =
+            data.statOneVal;
+        document.getElementById("modal-project-stat-one-desc").innerText =
+            data.statOneDesc;
+        document.getElementById("modal-project-stat-two-val").innerText =
+            data.statTwoVal;
+        document.getElementById("modal-project-stat-two-desc").innerText =
+            data.statTwoDesc;
+        document.getElementById("modal-project-step1-title").innerText =
+            data.step1Title;
+        document.getElementById("modal-project-step1-desc").innerText =
+            data.step1Desc;
+        document.getElementById("modal-project-step2-title").innerText =
+            data.step2Title;
+        document.getElementById("modal-project-step2-desc").innerText =
+            data.step2Desc;
+        document.getElementById("modal-project-step3-title").innerText =
+            data.step3Title;
+        document.getElementById("modal-project-step3-desc").innerText =
+            data.step3Desc;
+
+        const linkBtn = document.getElementById("modal-project-link");
+        if (data.link && data.link !== "#") {
+            linkBtn.href = data.link;
+        } else {
+            linkBtn.href = "#";
+        }
+        linkBtn.style.display = "inline-flex";
+
+        const tabs = ["arrowshop", "topoavance", "stealthgames", "rosemsas"];
+        tabs.forEach((id) => {
+            const el = document.getElementById("btn-tab-" + id);
+            if (el) {
+                if (id === projectId) {
+                    el.className =
+                        "px-3 py-1 rounded-full text-[10px] tracking-wider font-semibold border transition-all duration-300 border-[#643d29] bg-[#643d29]/10 text-white flex-shrink-0";
+                } else {
+                    el.className =
+                        "px-3 py-1 rounded-full text-[10px] tracking-wider font-semibold border transition-all duration-300 border-white/5 text-white/50 hover:text-white flex-shrink-0";
+                }
+            }
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const modalContainer = document.getElementById(
+            "project-modal-container",
+        );
+        const modalBox = document.getElementById("project-modal");
+        const closeBtn = document.getElementById("close-modal");
+
+        const openModal = (projectId) => {
+            switchProject(projectId);
+            modalContainer.classList.remove("hidden");
+            modalContainer.classList.add("flex");
+            void modalContainer.offsetWidth;
+            modalBox.classList.remove("opacity-0", "translate-y-4", "scale-95");
+            modalBox.classList.add("opacity-100", "translate-y-0", "scale-100");
+            document.body.style.overflow = "hidden";
+        };
+
+        const closeModal = () => {
+            modalBox.classList.remove(
+                "opacity-100",
+                "translate-y-0",
+                "scale-100",
+            );
+            modalBox.classList.add("opacity-0", "translate-y-4", "scale-95");
+            setTimeout(() => {
+                modalContainer.classList.add("hidden");
+                modalContainer.classList.remove("flex");
+                document.body.style.overflow = "";
+            }, 500);
+        };
+
+        document.querySelectorAll(".view-project-btn").forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                openModal(btn.getAttribute("data-project"));
+            });
+        });
+
+        if (closeBtn) closeBtn.addEventListener("click", closeModal);
+        modalContainer.addEventListener("click", (e) => {
+            if (e.target === modalContainer) closeModal();
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (
+                e.key === "Escape" &&
+                !modalContainer.classList.contains("hidden")
+            ) {
+                closeModal();
+            }
+        });
+    });
+</script>

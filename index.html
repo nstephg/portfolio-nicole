@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicole Cervera | Diseñadora Interactiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+    <canvas id="canvas-lines"></canvas>
+
+    <nav class="navbar">
+        <div class="logo">NICOLE CERVERA</div>
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#sobre-mi">SOBRE MÍ</a></li>
+            <li><a href="#habilidades">HABILIDADES</a></li>
+            <li><a href="#proyectos">PROYECTOS</a></li>
+            <li><a href="#trayectoria">TRAYECTORIA</a></li>
+            <li><a href="#servicios">SERVICIOS</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+            <li><button id="language-toggle" class="btn-lang">EN</button></li>
+        </ul>
+        <button id="language-toggle-mobile" class="btn-lang-mobile">EN</button>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <main class="site-wrapper">
+
+        <header id="inicio" class="hero">
+            <div class="hero-content">
+                <h1 class="reveal-top">DISEÑADORA INTERACTIVA <br><span>& DESARROLLADORA WEB</span></h1>
+                <p class="reveal-bottom">Creo experiencias digitales funcionales, atractivas e interactivas que conectan diseño y tecnología.</p>
+                <div class="scroll-indicator">SCROLL</div>
+            </div>
+        </header>
+
+        <section id="sobre-mi" class="about-premium">
+            <div class="about-container">
+                <div class="bg-text-reveal">CREATIVE</div>
+                
+                <div class="about-content">
+                    <div class="image-stack reveal-left">
+                        <div class="image-frame">
+                            <img src="assets/img/me.jpeg" width="100%" height="70%" alt="Nicole Cervera" class="profile-img">
+                        </div>
+                        <div class="decorative-box"></div> </div>
+
+                    <div class="text-premium reveal-right">
+                        <span class="eyebrow">DESCUBRE MI MUNDO</span>
+                        <h2>Más que código, <br><span class="italic">creo sensaciones.</span></h2>
+                        <div class="description-grid">
+                            <div class="desc-item">
+                                <p class="highlight">Soy Nicole Cervera, diseñadora interactiva en multimedia y desarrolladora web, apasionada por crear experiencias digitales que no solo se vean bien, sino que funcionen de forma intuitiva y eficiente.</p>
+                            </div>
+                            <div class="desc-item">
+                                <p>Trabajo desde una perspectiva centrada en el usuario, cuidando tanto la experiencia como la implementación técnica. Me interesa el equilibrio entre diseño visual, usabilidad, interacción y desarrollo.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stats-mini">
+                            <div class="stat"><strong>UI/UX</strong><span>Diseño</span></div>
+                            <div class="stat"><strong>WEB</strong><span>Desarrollo</span></div>
+                            <div class="stat"><strong>+20</strong><span>Ideas</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="skills-premium">
+            <div class="container">
+                <span class="eyebrow reveal-top">MY TOOLKIT</span>
+                <h2 class="section-title reveal-top">HABILIDADES <span class="italic">& TECH STACK</span></h2>
+
+                <div class="skills-grid">
+                    <div class="skill-category reveal-left">
+                        <div class="category-header">
+                            <div class="icon-box">✦</div>
+                            <h3>UX / UI & Diseño</h3>
+                        </div>
+                        <ul class="skill-list">
+                            <li><span>Diseño de interfaces (UI)</span><div class="progress-bar"><div class="progress" style="width: 95%"></div></div></li>
+                            <li><span>Experiencia de usuario (UX)</span><div class="progress-bar"><div class="progress" style="width: 90%"></div></div></li>
+                            <li><span>Diseño de interacción</span><div class="progress-bar"><div class="progress" style="width: 85%"></div></div></li>
+                            <li><span>Design Systems</span><div class="progress-bar"><div class="progress" style="width: 80%"></div></div></li>
+                            <li><span>Responsive Design</span><div class="progress-bar"><div class="progress" style="width: 95%"></div></div></li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category highlight-card reveal-bottom">
+                        <div class="category-header">
+                            <div class="icon-box"><></div>
+                            <h3>Desarrollo Web</h3>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Git</span>
+                        </div>
+                        <p class="category-desc">Especializada en crear puentes sólidos entre el diseño visual y la lógica del servidor.</p>
+                    </div>
+
+                    <div class="skill-category reveal-right">
+                        <div class="category-header">
+                            <div class="icon-box">⚙</div>
+                            <h3>Herramientas</h3>
+                        </div>
+                        <div class="tools-grid">
+                            <div class="tool-item"><span>Figma</span></div>
+                            <div class="tool-item"><span>Illustrator</span></div>
+                            <div class="tool-item"><span>Photoshop</span></div>
+                            <div class="tool-item"><span>VS Code</span></div>
+                            <div class="tool-item"><span>GitHub</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects-premium">
+            <div class="container">
+                <span class="eyebrow reveal-top">SHOWCASE</span>
+                <h2 class="section-title reveal-top">PROYECTOS <span class="italic">DESTACADOS</span></h2>
+
+                <div class="projects-grid">
+                
+                    <div class="project-card reveal-bottom" style="transition-delay: 0.2s;">
+                        <div class="project-image">
+                            <img src="assets/img/ArrowShopOne.png" alt="Nombre del Proyecto">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-category">WEB</span>
+                                    <h3>ArrowShopOne</h3>
+                                    <p>Diseño y desarrollo de página web e-commerce para la venta de artículos de motocross, con enfoque en experiencia de usuario, navegación intuitiva y proceso de compra optimizado.</p>
+                                    
+                                    <div class="project-tags">
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JS</span>
+                                        <span>Figma</span>
+                                        <span>PHP</span>
+                                        <span>MySQL</span>
+                                        <span>Vercel</span>
+                                    </div>
+                                    
+                                    <a href="https://arrowshopone.store" target="_blank"><button class="btn-case">Ver Proyecto ↗</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info-mobile">
+                            <h3>E-Commerce Vision</h3>
+                            <p>Desarrollo Front-end</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal-bottom" style="transition-delay: 0.2s;">
+                        <div class="project-image">
+                            <img src="assets/img/TopoAvance.png" alt="Nombre del Proyecto">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-category">WEB</span>
+                                    <h3>TopoAvance</h3>
+                                    <p>Diseño y desarrollo de página web corporativa para TopoAvance con enfoque en experiencia de usuario y navegación intuitiva</p>
+                                    
+                                    <div class="project-tags">
+                                        <span>Figma</span>
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JS</span>
+                                        <span>PhP</span>
+                                        <span>MySQL</span>
+                                    </div>
+                                    
+                                    <a href="https://topoavance.com" target="_blank"><button class="btn-case">Ver Proyecto ↗</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info-mobile">
+                            <h3>E-Commerce Vision</h3>
+                            <p>Desarrollo Front-end</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal-bottom">
+                        <div class="project-image">
+                            <img src="assets/img/StealthGames.png" alt="Nombre del Proyecto">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-category">UX/UI · DESARROLLO</span>
+                                    <h3>StealthGames</h3>
+                                    <p>Diseño UX/UI de una app para la venta de videojuegos, con galería premium de ediciones especiales – prototipo interactivo.</p>
+                                    
+                                    <div class="project-tags">
+                                        <span>Figma</span>
+                                    </div>
+                                    
+                                    <a href="https://www.figma.com/proto/sywHWgHJw5RjupMZUjgQ8D/Proyecto-StealthGames?node-id=47-56&p=f&t=TsUIBwqstfNGSZb1-1&scaling=scale-down&content-scaling=fixed&page-id=35%3A2&starting-point-node-id=47%3A56" target="_blank"><button class="btn-case">Ver Proyecto ↗</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-info-mobile">
+                            <h3>Nombre del Proyecto</h3>
+                            <p>Diseño de Interacción & Web</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="trayectoria" class="timeline-section">
+            <div class="container">
+                <span class="eyebrow reveal-top">MI CAMINO</span>
+                <h2 class="section-title reveal-top">EXPERIENCIA <span class="italic">& EDUCACIÓN</span></h2>
+
+                <div class="timeline-grid">
+                    <div class="timeline-column reveal-left">
+                        <h3 class="column-title">Formación</h3>
+                        <div class="timeline-item">
+                            <div class="time-circle"></div>
+                            <div class="timeline-content">
+                                <span class="date">Presente</span>
+                                <h4>Diseño Interactivo en Multimedia</h4>
+                                <p class="institution">Universidad del Tolima</p>
+                                <p class="desc">Programa enfocado en la formación de profesionales capaces de diseñar experiencias digitales mediante interfaces, arquitectura de la información y productos multimedia, integrando la interacción humano–tecnología para responder a las dinámicas de comunicación del entorno digital contemporáneo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-column reveal-right">
+                        <h3 class="column-title">Experiencia</h3>
+                        
+                        <div class="timeline-item">
+                            <div class="time-circle"></div>
+                            <div class="timeline-content">
+                                <span class="date">2025 - Actualidad</span>
+                                <h4>Diseño de Interfaces Web</h4>
+                                <p class="institution">Freelance / Proyectos Propios</p>
+                                <p class="desc">Conceptualización y prototipado de alta fidelidad, asegurando la coherencia visual y la facilidad de uso.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="time-circle"></div>
+                            <div class="timeline-content">
+                                <span class="date">2024</span>
+                                <h4>Desarrollo de Sitios Web</h4>
+                                <p class="institution">Colaboraciones Digitales</p>
+                                <p class="desc">Implementación técnica de diseños complejos, transformando archivos de Figma en código limpio y funcional.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="time-circle"></div>
+                            <div class="timeline-content">
+                                <span class="date">Inicios</span>
+                                <h4>Trabajo con Clientes</h4>
+                                <p class="institution">Proyectos Personales</p>
+                                <p class="desc">Gestión integral de proyectos, desde la toma de requerimientos hasta el despliegue final y pruebas de usuario.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="services-premium">
+            <div class="container">
+                <span class="eyebrow reveal-top">¿CÓMO PUEDO AYUDARTE?</span>
+                <h2 class="section-title reveal-top">MIS <span class="italic">SERVICIOS</span></h2>
+
+                <div class="services-grid">
+                    <div class="service-card reveal-bottom">
+                        <div class="service-number">01</div>
+                        <div class="service-icon">✦</div>
+                        <h3>Diseño UX/UI</h3>
+                        <p>Creación de interfaces intuitivas y estéticas para aplicaciones móviles y plataformas web, priorizando siempre la facilidad de uso.</p>
+                        <ul class="service-details">
+                            <li>Design Systems</li>
+                            <li>User Journey Maps</li>
+                            <li>Wireframing</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card reveal-bottom" style="transition-delay: 0.1s;">
+                        <div class="service-number">02</div>
+                        <div class="service-icon"><></div>
+                        <h3>Desarrollo Full-stack</h3>
+                        <p>Construcción de sitios web robustos y escalables. Desde la belleza del Front-end hasta la eficiencia del Back-end (PHP/MySQL).</p>
+                        <ul class="service-details">
+                            <li>Clean Code</li>
+                            <li>Optimización SEO</li>
+                            <li>API Integration</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card reveal-bottom" style="transition-delay: 0.2s;">
+                        <div class="service-number">03</div>
+                        <div class="service-icon">↺</div>
+                        <h3>Rediseño & Optimización</h3>
+                        <p>Transformo sitios obsoletos en experiencias modernas, mejorando la velocidad de carga y la tasa de conversión.</p>
+                        <ul class="service-details">
+                            <li>Performance Audit</li>
+                            <li>UI Modernization</li>
+                            <li>Responsive Fixes</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card reveal-bottom" style="transition-delay: 0.3s;">
+                        <div class="service-number">04</div>
+                        <div class="service-icon">⚙</div>
+                        <h3>Prototipado & Validación</h3>
+                        <p>Valido tus ideas antes del desarrollo mediante prototipos interactivos de alta fidelidad para reducir riesgos.</p>
+                        <ul class="service-details">
+                            <li>High-fi Prototypes</li>
+                            <li>User Testing</li>
+                            <li>Interaction Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cotizacion" class="pricing-premium">
+            <div class="container">
+                <span class="eyebrow reveal-top">INVERSIÓN</span>
+                <h2 class="section-title reveal-top">COTIZACIÓN <span class="italic">ESTIMADA</span></h2>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card reveal-left">
+                        <div class="plan-name">ESENCIAL</div>
+                        <div class="plan-price">
+                            Desde $270 - $400 USD
+                            <span class="price-cop">~ $1.0M - $1.5M COP</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>Design One-Pager</li>
+                            <li>Responsive Design</li>
+                            <li>SEO Básico</li>
+                            <li>Soporte 15 días</li>
+                        </ul>
+                        <a href="#contacto" class="btn-plan">Consultar</a>
+                    </div>
+
+                    <div class="pricing-card featured-plan reveal-bottom">
+                        <div class="popular-badge">RECOMENDADO</div>
+                        <div class="plan-name">INTERACTIVO</div>
+                        <div class="plan-price">
+                            Desde $450 - $600 USD
+                            <span class="price-cop">~ $1.7M - $2.3M COP</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>Hasta 5 Secciones</li>
+                            <li>Animaciones Premium</li>
+                            <li>Gestión de Contenido</li>
+                            <li>Optimización de Velocidad</li>
+                        </ul>
+                        <a href="#contacto" class="btn-plan featured">Empezar Proyecto</a>
+                    </div>
+
+                    <div class="pricing-card reveal-right">
+                        <div class="plan-name">FULL EXPERIENCE</div>
+                        <div class="plan-price">
+                            Personalizado
+                            <span class="price-cop">Presupuesto según requerimientos</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li>E-commerce</li>
+                            <li>Design System Completo</li>
+                            <li>Integración Back-end</li>
+                            <li>Soporte Premium</li>
+                        </ul>
+                        <a href="#contacto" class="btn-plan">Consultar</a>
+                    </div>
+                </div>
+                <p class="pricing-note">Los precios en COP son aproximados según la tasa del día. Los requerimientos específicos pueden variar el valor final.</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-premium">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info reveal-left">
+                        <span class="eyebrow">DI HOLA</span>
+                        <h2>Hablemos y construyamos algo <span class="italic">increíble.</span></h2>
+                        <p>¿Tienes un proyecto en mente o quieres trabajar conmigo? Estoy disponible para nuevas oportunidades y colaboraciones creativas.</p>
+                        
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/nicole.c.dev/" target="_blank" class="social-item"><span>IG</span> Instagram</a>
+                            <a href="https://wa.me/573174970432" target="_blank" class="social-item"><span>WA</span> WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container reveal-right">
+                        <form action="https://formspree.io/f/mdanvjrw" method="POST" class="premium-form" id="contact-form">
+                            <input type="text" name="_gotcha" style="display:none !important">
+                            <div class="input-group">
+                                <input type="text" id="name" name="nombre" required>
+                                <label for="name">Nombre</label>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Email</label>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="input-group">
+                                <textarea id="message" name="mensaje" rows="4" required></textarea>
+                                <label for="message">Mensaje</label>
+                                <span class="bar"></span>
+                            </div>
+                            <button type="submit" class="btn-submit" id="submit-btn">ENVIAR MENSAJE</button>
+                            <p id="form-status" style="margin-top: 15px; text-align: center; font-size: 0.9rem; min-height: 20px;"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-premium">
+
+            <div class="footer-main">
+                <div class="container footer-grid">
+                    <div class="footer-brand">
+                        <h2 class="reveal-top">NICOLE <br><span>CERVERA</span></h2>
+                        <p>Transformando visiones complejas en experiencias digitales memorables.</p>
+                    </div>
+
+                    <div class="footer-details reveal-bottom">
+                        <div class="detail-item">
+                            <span class="detail-label">ESTADO</span>
+                            <p>Disponible para nuevos proyectos</p>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">SÍGUEME</span>
+                            <div class="footer-socials">
+                                <a href="https://www.instagram.com/nicole.c.dev/" target="_blank">IG</a>
+                                <a href="https://wa.me/573174970432" target="_blank">WA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="container bottom-content">
+                        <p>© 2025 — NICOLE CERVERA</p>
+                        <p class="made-with">HECHO CON AMOR :)</p>
+                        <div class="back-to-top" onclick="window.scrollTo(0,0)">VOLVER ARRIBA ↑</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div id="google_translate_element" style="display:none;"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'es',
+                    includedLanguages: 'en,es',
+                    autoDisplay: false
+                }, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <script src="script.js"></script>
+
+    </main>
+</body>
+</html>
